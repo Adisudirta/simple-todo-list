@@ -34,7 +34,9 @@ function useStorage(mode) {
         localStorage.setItem(key, JSON.stringify(todo));
         break;
       case "GET":
-        todo = JSON.parse(localStorage.getItem(key));
+        if (localStorage.getItem(key) !== null) {
+          todo = JSON.parse(localStorage.getItem(key));
+        }
         getData();
         break;
     }
@@ -48,4 +50,6 @@ document.getElementById("save-btn").addEventListener("click", function () {
   getData();
 });
 
-useStorage("GET");
+if (todo !== null) {
+  useStorage("GET");
+}
