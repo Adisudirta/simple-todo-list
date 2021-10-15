@@ -59,6 +59,4 @@ document.getElementById("save-btn").addEventListener("click", function () {
   getData();
 });
 
-if (todo !== null) {
-  useStorage("GET");
-}
+useStorage("GET");

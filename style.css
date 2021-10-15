@@ -15,10 +15,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 8px;
 }
 
 .container-todo {
-  height: 90vh;
+  height: 95vh;
+  width: 350px;
   background-color: white;
   padding: 20px;
   border-radius: 5px;
@@ -54,6 +56,14 @@ h5,
   background-color: rgb(16, 16, 124);
 }
 
+#input-feild {
+  width: 60%;
+}
+
+#save-btn {
+  width: 30%;
+}
+
 .container-activity {
   padding: 10px;
 }
@@ -61,8 +71,8 @@ h5,
 .list-activity {
   margin-top: 10px;
   padding: 5px;
-  height: 64vh;
-  overflow: scroll;
+  height: 65vh;
+  overflow: auto;
 }
 
 .list-activity .activity {
@@ -87,4 +97,18 @@ h5,
 
 .list-activity .activity button:hover {
   font-weight: bold;
+}
+
+@media only screen and (min-width: 1900px) {
+  .container-todo {
+    width: 450px;
+  }
+
+  .list-activity {
+    height: 74vh;
+  }
+
+  #save-btn {
+    width: 32%;
+  }
 }
